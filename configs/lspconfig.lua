@@ -21,6 +21,7 @@ local servers = {
   "slint_lsp",
 }
 
+-- luacheck: globals ipairs
 for _, lsp in ipairs(servers) do
   if lsp == "rust_analyzer" then
     lspconfig.rust_analyzer.setup {

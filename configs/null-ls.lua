@@ -18,7 +18,7 @@ local sources = {
   lint.cpplint,
   lint.shellcheck,
   lint.eslint_d,
-  -- lint.luacheck,
+  lint.luacheck,
   lint.cmake_lint,
 
   actions.eslint_d,

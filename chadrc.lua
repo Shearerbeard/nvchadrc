@@ -1,12 +1,12 @@
 ---@type ChadrcConfig
 local M = {}
--- local vim = global.vim;
 
 M.ui = { theme = "oxocarbon", nvdash = { load_on_startup = true } }
 M.plugins = "custom.plugins"
 M.mappings = require "custom.mappings"
 
-function docker_fix()
+-- luacheck: globals Docker_Fix
+function Docker_Fix()
   local filename = vim.fn.expand "%:t"
 
   if filename == "docker-compose.yaml" then
@@ -20,6 +20,6 @@ function docker_fix()
   end
 end
 
-vim.cmd [[au BufRead * lua docker_fix()]]
+vim.cmd [[au BufRead * lua Docker_Fix()]]
 
 return M
